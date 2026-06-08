@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Get in touch with Jon Grorud — Strategic Enterprise Software Executive."
+      content="Get in touch with Jon Grorud — strategic enterprise software sales leader based in London. Connect on LinkedIn or send a message."
     />
     <title>Contact · Jon Grorud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -25,11 +25,12 @@
         <ul class="nav__links" data-nav-links>
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="track-record.html" class="nav__link">Track Record</a></li>
           <li><a href="contact.html" class="nav__link is-active">Contact</a></li>
         </ul>
 
         <div class="nav__actions">
-          <a href="contact.html" class="btn btn--ghost">Let's connect</a>
+          <a href="contact.html" class="btn btn--ghost">Connect</a>
           <button
             class="theme-toggle"
             type="button"
@@ -53,84 +54,89 @@
     </header>
 
     <main>
-      <section class="section">
+      <!-- Page head -->
+      <section class="page-head">
         <div class="container">
-          <div class="section__head">
-            <span class="eyebrow">Contact</span>
-            <h1 class="section__title">Let's connect</h1>
-            <p class="section__subtitle">
-              Exploring an advisory, board, or leadership opportunity — or just
-              want to talk enterprise growth? Send a message and I'll get back to
-              you.
-            </p>
-          </div>
+          <span class="eyebrow">Contact</span>
+          <h1 class="page-head__title">Let's connect</h1>
+          <p class="page-head__lead">
+            Always glad to trade notes on enterprise software, AI and cloud
+            go-to-market, or scaling teams in EMEA. The fastest way to reach me
+            is LinkedIn or email.
+          </p>
+        </div>
+      </section>
 
-          <div class="contact__grid">
-            <!-- Contact details -->
-            <div class="contact-info">
-              <div class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <!-- Contact -->
+      <section class="section">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <span class="eyebrow">Get in touch</span>
+            <h2 class="section__title">Direct lines</h2>
+            <ul class="info-list" style="margin-top: 1.5rem">
+              <li class="info-item">
+                <span class="info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
                 </span>
                 <div>
-                  <h4>Email</h4>
-                  <p><a href="mailto:jon.grorud@gmail.com">jon.grorud@gmail.com</a></p>
+                  <div class="info-item__label">Email</div>
+                  <a class="info-item__value" href="mailto:jon.grorud@gmail.com">jon.grorud@gmail.com</a>
                 </div>
-              </div>
-
-              <div class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              </li>
+              <li class="info-item">
+                <span class="info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.25 8.25h4.5V23H.25V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.13 2.07-2.32 4.26-2.32 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.54c0-1.56-.03-3.56-2.17-3.56-2.17 0-2.5 1.7-2.5 3.45V23H8.5V8.25z"/></svg>
                 </span>
                 <div>
-                  <h4>LinkedIn</h4>
-                  <p><a href="https://www.linkedin.com/in/jongrorud/" target="_blank" rel="noopener">linkedin.com/in/jongrorud</a></p>
+                  <div class="info-item__label">LinkedIn</div>
+                  <a
+                    class="info-item__value"
+                    href="https://www.linkedin.com/in/jongrorud/"
+                    target="_blank"
+                    rel="noopener"
+                    >linkedin.com/in/jongrorud</a
+                  >
                 </div>
-              </div>
-
-              <div class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">
+              </li>
+              <li class="info-item">
+                <span class="info-item__icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </span>
                 <div>
-                  <h4>Availability</h4>
-                  <p>Advisory, board &amp; leadership roles · Global</p>
+                  <div class="info-item__label">Based in</div>
+                  <span class="info-item__value">London, United Kingdom</span>
                 </div>
-              </div>
+              </li>
+              <li class="info-item">
+                <span class="info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </span>
+                <div>
+                  <div class="info-item__label">Focus</div>
+                  <span class="info-item__value">Enterprise software · AI, cloud &amp; data · EMEA</span>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-              <div class="social" style="justify-content: flex-start">
-                <a href="https://www.linkedin.com/in/jongrorud/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-                <a href="mailto:jon.grorud@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-              </div>
-            </div>
-
-            <!-- Form -->
+          <!-- Form -->
+          <div class="reveal">
             <form class="form" data-contact-form novalidate>
-              <div class="form__row">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your name" required />
-                  <span class="field__error" aria-live="polite"></span>
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
-                  <span class="field__error" aria-live="polite"></span>
-                </div>
-              </div>
-
               <div class="field">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" />
                 <span class="field__error" aria-live="polite"></span>
               </div>
-
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" />
+                <span class="field__error" aria-live="polite"></span>
+              </div>
               <div class="field">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell me a little about your project..." required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <span class="field__error" aria-live="polite"></span>
               </div>
-
               <button type="submit" class="btn btn--primary">Send message</button>
               <p class="form__status" data-form-status role="status" aria-live="polite"></p>
             </form>
@@ -140,12 +146,32 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container site-footer__grid">
-        <p>&copy; <span data-year>2025</span> Jon Grorud. All rights reserved.</p>
-        <div class="social">
-          <a href="https://www.linkedin.com/in/jongrorud/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-          <a href="mailto:jon.grorud@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    <footer class="site-footer on-dark">
+      <div class="container footer__grid">
+        <div>
+          <div class="footer__brand">Jon Grorud<span>.</span></div>
+          <p class="footer__note">
+            &copy; <span data-year>2025</span> Jon Grorud · Strategic Enterprise
+            Software Sales Leader · London, UK
+          </p>
+        </div>
+        <div class="socials">
+          <a
+            href="https://www.linkedin.com/in/jongrorud/"
+            class="social"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn profile"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.25 8.25h4.5V23H.25V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.13 2.07-2.32 4.26-2.32 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.54c0-1.56-.03-3.56-2.17-3.56-2.17 0-2.5 1.7-2.5 3.45V23H8.5V8.25z"/></svg>
+          </a>
+          <a
+            href="mailto:jon.grorud@gmail.com"
+            class="social"
+            aria-label="Send an email"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a>
         </div>
       </div>
     </footer>

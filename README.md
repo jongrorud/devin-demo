@@ -1,35 +1,48 @@
-# Jon Grorud — Personal Website
+# Jon Grorud — Personal Website (V2 "Executive Ink")
 
-A clean, modern, fully responsive personal website for **Jon Grorud, Strategic
-Enterprise Software Executive**, built with plain HTML, CSS, and vanilla
+A refined, modern, fully responsive personal website for **Jon Grorud — Strategic
+Enterprise Software Sales Leader**, built with plain HTML, CSS, and vanilla
 JavaScript — no build step, no dependencies, no framework required.
+
+This is **Version 2**, positioning Jon across four pillars — *Strategic
+Enterprise Software Seller · AI, Data & Cloud Specialist · Enterprise Growth
+Leader · Future Sales Management candidate* — with content drawn directly from
+his CV. It lives on the `jon-profile-v2` branch; the original version is
+preserved on its own branch.
 
 ## Features
 
-- **Three pages** — Home, About, and Contact, with a shared sticky navigation.
+- **Four pages** — Home, About, Track Record, and Contact, with a shared sticky
+  navigation.
+- **"Executive Ink" design** — deep navy/ink + warm off-white with a copper/gold
+  accent; **Fraunces** serif display headings paired with **Inter** body text.
 - **Modern responsive design** — fluid layouts that adapt from mobile to
   widescreen using CSS Grid, Flexbox, and `clamp()`-based fluid typography.
 - **Light & dark mode** — a theme toggle that respects the visitor's OS
   preference and remembers their choice via `localStorage`.
+- **Scroll-reveal animations** — subtle fade/slide-in via `IntersectionObserver`,
+  disabled under `prefers-reduced-motion`.
 - **Accessible** — semantic HTML, ARIA labels, keyboard-friendly controls, and
-  `prefers-reduced-motion` support.
+  reduced-motion support.
 - **Contact form with validation** — client-side validation with inline error
   messages and a success confirmation (no backend required).
-- **Zero dependencies** — only the Inter web font is loaded from a CDN.
+- **Zero dependencies** — only the Fraunces + Inter web fonts are loaded from a
+  CDN.
 
 ## Project structure
 
 ```
 .
-├── index.html        # Home (hero, services, highlights, industries, logos, CTA)
-├── about.html        # About (bio, career highlights, experience, industries)
-├── contact.html      # Contact page (details + LinkedIn + validated form)
+├── index.html          # Home (hero, proof bar, pillars, logo wall, wins, CTA)
+├── about.html          # About (bio, expertise, methodologies, education)
+├── track-record.html   # Track Record (highlights, timeline, wins, industries)
+├── contact.html        # Contact (details + LinkedIn + validated form)
 ├── assets/
-│   └── jon-grorud.jpg # Profile photo (hero + about profile card)
+│   └── jon-grorud.jpg   # Profile photo (hero + about profile card)
 ├── css/
-│   └── styles.css    # All styles and design tokens (CSS custom properties)
+│   └── styles.css       # All styles and design tokens (CSS custom properties)
 ├── js/
-│   └── main.js       # Theme toggle, mobile nav, footer year, form validation
+│   └── main.js          # Theme toggle, mobile nav, scroll reveal, form validation
 └── README.md
 ```
 
@@ -53,19 +66,21 @@ Then open <http://localhost:8000> in your browser.
 
 The site is branded for **Jon Grorud**. Contact email
 (`jon.grorud@gmail.com`) and the LinkedIn profile
-(<https://www.linkedin.com/in/jongrorud/>) are wired in across all pages.
+(<https://www.linkedin.com/in/jongrorud/>) are wired in across all pages. All
+content is sourced from Jon's CV.
 
-Some sections use representative placeholder copy you may want to refine:
-
-| What to change        | Where                                                          |
-| --------------------- | -------------------------------------------------------------- |
-| Profile photo         | Replace `assets/jon-grorud.jpg` (square images work best)      |
-| Headline & bio        | `index.html` hero section, `about.html` bio paragraphs         |
-| Career highlights     | `.highlight` cards in `index.html` and `about.html`            |
-| Experience timeline   | `about.html` `.timeline` block (titles, dates, descriptions)   |
-| Industries served     | `.skills` blocks in `index.html` and `about.html`              |
-| Customer logos        | `.logo-tile` entries in `index.html` (placeholder names today) |
-| Colors & theme        | CSS custom properties at the top of `css/styles.css`           |
+| What to change        | Where                                                            |
+| --------------------- | ---------------------------------------------------------------- |
+| Profile photo         | Replace `assets/jon-grorud.jpg` (portrait/square images work)    |
+| Headline & positioning| `index.html` hero, `about.html` bio paragraphs                   |
+| Proof stats           | `.proof` blocks in the `index.html` hero proof bar               |
+| Pillars               | `.pillar` cards in `index.html` (and expertise cards in About)   |
+| Career highlights     | `.highlight` cards in `track-record.html`                        |
+| Experience timeline   | `.timeline` block in `track-record.html`                         |
+| Selected wins         | `.case` cards in `index.html` and `track-record.html`            |
+| Industries served     | `.badges` block in `track-record.html`                           |
+| Customer logos        | `.logo-tile` entries in `index.html`                             |
+| Colors & theme        | CSS custom properties at the top of `css/styles.css`             |
 
 ### Theming
 
