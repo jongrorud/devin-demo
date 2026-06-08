@@ -1,21 +1,30 @@
-# Jon Grorud — Personal Website (V2 "Executive Ink")
+# Jon Grorud — Personal Website (V3 "Executive Ink, refined")
 
 A refined, modern, fully responsive personal website for **Jon Grorud — Strategic
-Enterprise Software Sales Leader**, built with plain HTML, CSS, and vanilla
+Enterprise Software Executive**, built with plain HTML, CSS, and vanilla
 JavaScript — no build step, no dependencies, no framework required.
 
-This is **Version 2**, positioning Jon across four pillars — *Strategic
-Enterprise Software Seller · AI, Data & Cloud Specialist · Enterprise Growth
-Leader · Future Sales Management candidate* — with content drawn directly from
-his CV. It lives on the `jon-profile-v2` branch; the original version is
-preserved on its own branch.
+This is **Version 3**. It repositions Jon primarily as an **elite enterprise
+software sales professional** who helps category-defining technology companies
+win and expand their largest enterprise customers — across AI, data platforms,
+cloud, analytics and SaaS. Management experience remains visible as a supporting
+element rather than the primary story. The design is tightened for a cleaner,
+more executive feel (Databricks/Snowflake/Anthropic-style): a reduced type
+scale, a consistent grid, equal-height cards and tighter spacing. It lives on
+the `jon-profile-v3` branch; V1 and V2 are preserved on their own branches.
+
+The four positioning pillars are *Strategic Enterprise Selling · Strategic
+Account Growth · Transformational Technology · Trusted Executive Advisor*, with
+content drawn directly from Jon's CV.
 
 ## Features
 
 - **Four pages** — Home, About, Track Record, and Contact, with a shared sticky
   navigation.
-- **"Executive Ink" design** — deep navy/ink + warm off-white with a copper/gold
-  accent; **Fraunces** serif display headings paired with **Inter** body text.
+- **"Executive Ink, refined" design** — deep navy/ink + warm off-white with a
+  restrained copper/gold accent. **Inter** is used throughout; the **Fraunces**
+  serif is reserved for the single hero headline. Body text is ~10–15% smaller
+  than V2 with a consistent grid and equal-height content cards.
 - **Modern responsive design** — fluid layouts that adapt from mobile to
   widescreen using CSS Grid, Flexbox, and `clamp()`-based fluid typography.
 - **Light & dark mode** — a theme toggle that respects the visitor's OS
@@ -26,7 +35,7 @@ preserved on its own branch.
   reduced-motion support.
 - **Contact form with validation** — client-side validation with inline error
   messages and a success confirmation (no backend required).
-- **Zero dependencies** — only the Fraunces + Inter web fonts are loaded from a
+- **Zero dependencies** — only the Inter + Fraunces web fonts are loaded from a
   CDN.
 
 ## Project structure
