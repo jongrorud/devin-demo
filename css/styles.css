@@ -1,7 +1,7 @@
 /* =============================================================================
-   Jon Grorud — Website V2 "Executive Ink"
-   Palette: deep navy/ink + warm off-white + copper/gold accent
-   Type: Fraunces (serif display) + Inter (sans body)
+   Jon Grorud — Website V3 "Executive Ink, refined"
+   Palette: deep navy/ink + warm off-white + restrained copper/gold accent
+   Type: Inter throughout; Fraunces serif reserved for the hero headline only.
    Vanilla CSS, mobile-first, light/dark themes.
    ========================================================================== */
 
@@ -44,7 +44,8 @@
   --radius-lg: 22px;
   --radius-pill: 999px;
 
-  --container: 1140px;
+  --container: 1120px;
+  --measure: 62ch;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -90,8 +91,8 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.58;
   color: var(--color-text);
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -103,11 +104,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--color-heading);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
@@ -151,7 +152,7 @@ ul {
 }
 
 .section {
-  padding-block: clamp(3.5rem, 7vw, 6rem);
+  padding-block: clamp(2.75rem, 4.5vw, 4.25rem);
 }
 
 .section--alt {
@@ -159,8 +160,8 @@ ul {
 }
 
 .section__head {
-  max-width: 640px;
-  margin-bottom: 2.75rem;
+  max-width: 660px;
+  margin-bottom: 2rem;
 }
 
 .section__head--center {
@@ -169,13 +170,14 @@ ul {
 }
 
 .section__title {
-  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
-  margin-bottom: 0.85rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+  margin-bottom: 0.7rem;
 }
 
 .section__subtitle {
   color: var(--color-text-muted);
-  font-size: 1.075rem;
+  font-size: 0.97rem;
+  max-width: var(--measure);
 }
 
 .eyebrow {
@@ -195,8 +197,9 @@ ul {
 }
 
 .lead {
-  font-size: 1.15rem;
+  font-size: 1.02rem;
   color: var(--color-text-muted);
+  max-width: var(--measure);
 }
 
 /* ----- Buttons ----------------------------------------------------------- */
@@ -274,11 +277,11 @@ ul {
 }
 
 .nav__brand {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--color-heading);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .nav__brand span {
@@ -401,8 +404,8 @@ html[data-theme="dark"] .icon-moon {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
 }
 
 .hero__content .eyebrow {
@@ -410,9 +413,13 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .hero__title {
+  font-family: var(--font-serif);
   color: #fff;
-  font-size: clamp(2.4rem, 5.4vw, 4rem);
-  margin-bottom: 1.25rem;
+  font-size: clamp(2.05rem, 4.4vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+  margin-bottom: 1.1rem;
 }
 
 .hero__title .accent {
@@ -421,9 +428,9 @@ html[data-theme="dark"] .icon-moon {
 
 .hero__lead {
   color: var(--color-invert-muted);
-  font-size: 1.18rem;
-  max-width: 36rem;
-  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  max-width: 34rem;
+  margin-bottom: 1.75rem;
 }
 
 .hero__actions {
@@ -481,9 +488,10 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .proof__num {
-  font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--gold);
   line-height: 1.1;
 }
@@ -498,7 +506,7 @@ html[data-theme="dark"] .icon-moon {
 /* ----- Generic grids ----------------------------------------------------- */
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .grid--2 {
@@ -515,10 +523,11 @@ html[data-theme="dark"] .icon-moon {
 
 /* ----- Cards ------------------------------------------------------------- */
 .card {
+  height: 100%;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 1.75rem;
+  padding: 1.5rem;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition),
     border-color var(--transition);
@@ -542,8 +551,8 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .card__title {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+  margin-bottom: 0.45rem;
 }
 
 .card__kicker {
@@ -557,6 +566,7 @@ html[data-theme="dark"] .icon-moon {
 
 .card p {
   color: var(--color-text-muted);
+  font-size: 0.92rem;
 }
 
 /* Pillar cards (numbered) */
@@ -566,9 +576,9 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .pillar__index {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--color-on-accent);
   background: var(--color-accent);
   width: 30px;
@@ -581,26 +591,28 @@ html[data-theme="dark"] .icon-moon {
 
 /* ----- Highlight cards (metric-forward) ---------------------------------- */
 .highlight {
+  height: 100%;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.4rem;
   box-shadow: var(--shadow-sm);
 }
 
 .highlight__metric {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--color-heading);
   margin-bottom: 0.3rem;
 }
 
 .highlight p {
   color: var(--color-text-muted);
-  font-size: 0.97rem;
+  font-size: 0.9rem;
 }
 
 /* ----- Logo wall --------------------------------------------------------- */
@@ -613,12 +625,12 @@ html[data-theme="dark"] .icon-moon {
 .logo-tile {
   display: grid;
   place-items: center;
-  min-height: 88px;
+  min-height: 78px;
   padding: 1rem;
   text-align: center;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 1.02rem;
+  font-size: 0.95rem;
   letter-spacing: 0.01em;
   color: var(--color-text-muted);
   background-color: var(--color-surface);
@@ -647,8 +659,8 @@ html[data-theme="dark"] .icon-moon {
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.45rem 0.95rem;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text);
   background-color: var(--color-surface);
@@ -690,7 +702,7 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .profile-card__name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0.25rem;
 }
 
@@ -728,7 +740,8 @@ html[data-theme="dark"] .icon-moon {
 
 .prose p {
   color: var(--color-text-muted);
-  font-size: 1.05rem;
+  font-size: 0.97rem;
+  max-width: 64ch;
 }
 
 /* ----- Timeline ---------------------------------------------------------- */
@@ -781,7 +794,7 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .tl-item__role {
-  font-size: 1.18rem;
+  font-size: 1.08rem;
   margin: 0.3rem 0 0.1rem;
 }
 
@@ -805,7 +818,7 @@ html[data-theme="dark"] .icon-moon {
   position: relative;
   padding-left: 1.1rem;
   color: var(--color-text-muted);
-  font-size: 0.96rem;
+  font-size: 0.9rem;
 }
 
 .tl-item li::before {
@@ -821,6 +834,7 @@ html[data-theme="dark"] .icon-moon {
 
 /* ----- Case snapshots ---------------------------------------------------- */
 .case {
+  height: 100%;
   background: linear-gradient(
     180deg,
     var(--color-surface),
@@ -828,7 +842,7 @@ html[data-theme="dark"] .icon-moon {
   );
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 1.9rem;
+  padding: 1.6rem;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -847,12 +861,13 @@ html[data-theme="dark"] .icon-moon {
 }
 
 .case__headline {
-  font-size: 1.5rem;
-  margin: 0.5rem 0 0.6rem;
+  font-size: 1.22rem;
+  margin: 0.5rem 0 0.55rem;
 }
 
 .case p {
   color: var(--color-text-muted);
+  font-size: 0.92rem;
 }
 
 /* ----- CTA band ---------------------------------------------------------- */
@@ -872,15 +887,15 @@ html[data-theme="dark"] .icon-moon {
 
 .cta h2 {
   color: #fff;
-  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
-  margin-bottom: 0.75rem;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  margin-bottom: 0.7rem;
 }
 
 .cta p {
   color: var(--color-invert-muted);
   max-width: 40rem;
-  margin: 0 auto 1.75rem;
-  font-size: 1.08rem;
+  margin: 0 auto 1.6rem;
+  font-size: 0.98rem;
 }
 
 .cta__actions {
@@ -894,18 +909,18 @@ html[data-theme="dark"] .icon-moon {
 .page-head {
   background-color: var(--color-surface-2);
   border-bottom: 1px solid var(--color-border);
-  padding-block: clamp(2.75rem, 6vw, 4.5rem);
+  padding-block: clamp(2.25rem, 4.5vw, 3.5rem);
 }
 
 .page-head__title {
-  font-size: clamp(2rem, 4.4vw, 3.1rem);
-  margin-bottom: 0.75rem;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin-bottom: 0.6rem;
 }
 
 .page-head__lead {
   color: var(--color-text-muted);
-  font-size: 1.12rem;
-  max-width: 44rem;
+  font-size: 1rem;
+  max-width: 56ch;
 }
 
 /* ----- Contact ----------------------------------------------------------- */
@@ -1060,8 +1075,9 @@ html[data-theme="dark"] .form__status.is-success {
 }
 
 .footer__brand {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.12rem;
   color: #fff;
 }
 
