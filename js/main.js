@@ -19,13 +19,8 @@
     }
     if (saved === "light" || saved === "dark") {
       applyTheme(saved);
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      applyTheme("dark");
     } else {
-      applyTheme("light");
+      applyTheme("dark");
     }
   }
 
