@@ -1,0 +1,96 @@
+plugins {
+	id 'java-library'
+	id 'io.freefair.lombok' version '5.2.1'
+	id 'maven-publish'
+	id 'signing'
+}
+
+targetCompatibility = JavaVersion.VERSION_1_10
+sourceCompatibility = JavaVersion.VERSION_1_10
+
+archivesBaseName    = 'event-router'
+group               = 'dk.danskebank.markets'
+version             = '2.0.2'
+
+repositories {
+	// Needed for the developer environment inside Danske Bank.
+	if (System.properties['inside'] == 'Danske') {
+		maven {
+			name = 'joined-gradle'
+			url artifactory_joinedUrl
+			credentials {
+				username = artifactory_user
+				password = artifactory_password
+			}
+		}
+	}
+
+	mavenCentral()
+}
+
+java {
+	withJavadocJar()
+	withSourcesJar()
+}
+
+artifacts {
+	archives javadocJar, sourcesJar
+}
+
+dependencies {
+	implementation     group: 'org.apache.logging.log4j', name: 'log4j-api',     version: '2.17.1'
+	implementation     group: 'org.apache.logging.log4j', name: 'log4j-core',    version: '2.17.1'
+	testImplementation group: 'org.mockito',              name: 'mockito-core',  version: '4.2.0'
+	testImplementation group: 'org.junit.jupiter',        name: 'junit-jupiter', version: '5.8.2'
+}
+
+publishing {
+	publications {
+		eventRouter(MavenPublication) {
+			from components.java
+
+			pom {
+				name        = 'Event Router'
+				description = 'Efficient routing of events with a DSL for providing a concise overview.'
+				url         = 'https://github.com/danskemarkets/event-router'
+
+				scm {
+					connection          = 'scm:git:git://github.com/danskemarkets/event-router'
+					developerConnection = 'scm:git:git://github.com/danskemarkets/event-router'
+					url                 = 'https://github.com/danskemarkets/event-router'
+				}
+
+				licenses {
+					license {
+						name = 'The MIT License'
+						url  = 'https://opensource.org/licenses/MIT'
+					}
+				}
+
+				developers {
+					developer {
+						id           = 'nisch'
+						name         = 'Nicholas Schultz-Møller'
+						email        = 'nisch@danskebank.dk'
+						organization = 'Danske Bank A/S'
+					}
+				}
+			}
+		}
+	}
+
+	repositories {
+		maven {
+			name = 'Sonatype'
+			url  = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+			credentials {
+				username = ossrhUsername
+				password = ossrhPassword
+			}
+		}
+	}
+}
+
+signing {
+	sign publishing.publications.eventRouter
+}
